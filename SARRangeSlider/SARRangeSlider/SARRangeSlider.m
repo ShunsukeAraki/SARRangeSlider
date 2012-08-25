@@ -188,7 +188,7 @@ typedef enum HandleDirection : NSUInteger {
 {
     // Drawing code
 	
-	// TODO:スライダー内部を透明にする
+	// TODO:スライダー内部を透明にする QuartzCoreGuide 55P
 }
 
 - (void)layoutSubviews {
