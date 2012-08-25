@@ -2,7 +2,7 @@ SHARangeSlider
 ==========
 ビデオトリミング等に使う範囲選択スライダーを、画像ファイルを使わずに実装してみた
 
-![image](./ss.png)
+![image](https://github.com/ShunsukeAraki/SARRangeSlider/blob/master/ss.png)
 ###注意：未完成品です。
 
 created at **iphone_dev_jp東京 iPhone/Mac Hackathon(2012/08/25)**
