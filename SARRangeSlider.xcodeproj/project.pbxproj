@@ -15,6 +15,8 @@
 		240976DA15E8624D00920975 /* SARAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 240976D915E8624D00920975 /* SARAppDelegate.m */; };
 		240976DD15E8624D00920975 /* SARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240976DC15E8624D00920975 /* SARViewController.m */; };
 		240976E015E8624D00920975 /* SARViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 240976DE15E8624D00920975 /* SARViewController.xib */; };
+		240976ED15E8630000920975 /* SARRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 240976EC15E8630000920975 /* SARRangeSlider.m */; };
+		240976F715E892AB00920975 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240976F615E892AB00920975 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,9 @@
 		240976DB15E8624D00920975 /* SARViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SARViewController.h; sourceTree = "<group>"; };
 		240976DC15E8624D00920975 /* SARViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SARViewController.m; sourceTree = "<group>"; };
 		240976DF15E8624D00920975 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SARViewController.xib; sourceTree = "<group>"; };
+		240976EB15E8630000920975 /* SARRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SARRangeSlider.h; sourceTree = "<group>"; };
+		240976EC15E8630000920975 /* SARRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SARRangeSlider.m; sourceTree = "<group>"; };
+		240976F615E892AB00920975 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				240976F715E892AB00920975 /* QuartzCore.framework in Frameworks */,
 				240976CA15E8624D00920975 /* UIKit.framework in Frameworks */,
 				240976CC15E8624D00920975 /* Foundation.framework in Frameworks */,
 				240976CE15E8624D00920975 /* CoreGraphics.framework in Frameworks */,
@@ -50,7 +56,7 @@
 		240976BA15E8624D00920975 = {
 			isa = PBXGroup;
 			children = (
-				240976CF15E8624D00920975 /* SARRangeSlider */,
+				240976CF15E8624D00920975 /* SARRangeSliderDemo */,
 				240976C815E8624D00920975 /* Frameworks */,
 				240976C615E8624D00920975 /* Products */,
 			);
@@ -67,6 +73,7 @@
 		240976C815E8624D00920975 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				240976F615E892AB00920975 /* QuartzCore.framework */,
 				240976C915E8624D00920975 /* UIKit.framework */,
 				240976CB15E8624D00920975 /* Foundation.framework */,
 				240976CD15E8624D00920975 /* CoreGraphics.framework */,
@@ -74,9 +81,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		240976CF15E8624D00920975 /* SARRangeSlider */ = {
+		240976CF15E8624D00920975 /* SARRangeSliderDemo */ = {
 			isa = PBXGroup;
 			children = (
+				240976E615E8629600920975 /* SARRangeSlider */,
 				240976D815E8624D00920975 /* SARAppDelegate.h */,
 				240976D915E8624D00920975 /* SARAppDelegate.m */,
 				240976DB15E8624D00920975 /* SARViewController.h */,
@@ -84,6 +92,7 @@
 				240976DE15E8624D00920975 /* SARViewController.xib */,
 				240976D015E8624D00920975 /* Supporting Files */,
 			);
+			name = SARRangeSliderDemo;
 			path = SARRangeSlider;
 			sourceTree = "<group>";
 		};
@@ -96,6 +105,15 @@
 				240976D715E8624D00920975 /* SARRangeSlider-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		240976E615E8629600920975 /* SARRangeSlider */ = {
+			isa = PBXGroup;
+			children = (
+				240976EB15E8630000920975 /* SARRangeSlider.h */,
+				240976EC15E8630000920975 /* SARRangeSlider.m */,
+			);
+			path = SARRangeSlider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +183,7 @@
 				240976D615E8624D00920975 /* main.m in Sources */,
 				240976DA15E8624D00920975 /* SARAppDelegate.m in Sources */,
 				240976DD15E8624D00920975 /* SARViewController.m in Sources */,
+				240976ED15E8630000920975 /* SARRangeSlider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,21 +7,48 @@
 //
 
 #import "SARViewController.h"
+#import "SARRangeSlider.h"
 
 @interface SARViewController ()
 
 @end
 
 @implementation SARViewController
+{
+	IBOutlet SARRangeSlider *oRangeSlider1;
+	IBOutlet SARRangeSlider *oRangeSlider2;
+	IBOutlet SARRangeSlider *oRangeSlider3;
+	IBOutlet UILabel *oLabel1;
+	IBOutlet UILabel *oLabel2;
+	IBOutlet UILabel *oLabel3;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	oRangeSlider1.minimumRange = 0.2;
+	// TODO:範囲を初期値から変更するとバグる
+	oRangeSlider2.minimumValue = 20;
+	oRangeSlider2.maximumValue = 200;
+	oRangeSlider2.minimumRange = 50;
+	oRangeSlider2.leftValue = 0;
+	oRangeSlider2.rightValue = 150;
+	oRangeSlider3.leftValue = 0.2;
+	oRangeSlider3.rightValue = 0.5;
+	[self rangeSlider1ValueChanged:oRangeSlider1];
+	[self rangeSlider2ValueChanged:oRangeSlider2];
+	[self rangeSlider3ValueChanged:oRangeSlider3];
 }
 
 - (void)viewDidUnload
 {
+	oRangeSlider1 = nil;
+	oRangeSlider2 = nil;
+	oRangeSlider3 = nil;
+	oLabel1 = nil;
+	oLabel2 = nil;
+	oLabel3 = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -29,6 +56,17 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+- (IBAction)rangeSlider1ValueChanged:(SARRangeSlider *)sender {
+	oLabel1.text = [NSString stringWithFormat:@"left=%.1f, right=%.1f, min=%.1f, max=%.1f, minRange=%.1f", sender.leftValue, sender.rightValue, sender.minimumValue, sender.maximumValue, sender.minimumRange];
+}
+
+- (IBAction)rangeSlider2ValueChanged:(SARRangeSlider *)sender {
+	oLabel2.text = [NSString stringWithFormat:@"left=%.1f, right=%.1f, min=%.1f, max=%.1f, minRange=%.1f", sender.leftValue, sender.rightValue, sender.minimumValue, sender.maximumValue, sender.minimumRange];
+}
+
+- (IBAction)rangeSlider3ValueChanged:(SARRangeSlider *)sender {
+	oLabel3.text = [NSString stringWithFormat:@"left=%.1f, right=%.1f, min=%.1f, max=%.1f, minRange=%.1f", sender.leftValue, sender.rightValue, sender.minimumValue, sender.maximumValue, sender.minimumRange];
 }
 
 @end
