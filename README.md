@@ -1,4 +1,4 @@
-SHARangeSlider
+SARRangeSlider
 ==========
 ビデオトリミング等に使う範囲選択スライダーを、画像ファイルを使わずに実装してみた
 
