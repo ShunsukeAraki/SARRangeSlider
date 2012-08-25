@@ -1,0 +1,287 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		240976CA15E8624D00920975 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240976C915E8624D00920975 /* UIKit.framework */; };
+		240976CC15E8624D00920975 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240976CB15E8624D00920975 /* Foundation.framework */; };
+		240976CE15E8624D00920975 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240976CD15E8624D00920975 /* CoreGraphics.framework */; };
+		240976D415E8624D00920975 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 240976D215E8624D00920975 /* InfoPlist.strings */; };
+		240976D615E8624D00920975 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 240976D515E8624D00920975 /* main.m */; };
+		240976DA15E8624D00920975 /* SARAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 240976D915E8624D00920975 /* SARAppDelegate.m */; };
+		240976DD15E8624D00920975 /* SARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240976DC15E8624D00920975 /* SARViewController.m */; };
+		240976E015E8624D00920975 /* SARViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 240976DE15E8624D00920975 /* SARViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		240976C515E8624D00920975 /* SARRangeSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SARRangeSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		240976C915E8624D00920975 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		240976CB15E8624D00920975 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		240976CD15E8624D00920975 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		240976D115E8624D00920975 /* SARRangeSlider-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SARRangeSlider-Info.plist"; sourceTree = "<group>"; };
+		240976D315E8624D00920975 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		240976D515E8624D00920975 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		240976D715E8624D00920975 /* SARRangeSlider-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SARRangeSlider-Prefix.pch"; sourceTree = "<group>"; };
+		240976D815E8624D00920975 /* SARAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SARAppDelegate.h; sourceTree = "<group>"; };
+		240976D915E8624D00920975 /* SARAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SARAppDelegate.m; sourceTree = "<group>"; };
+		240976DB15E8624D00920975 /* SARViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SARViewController.h; sourceTree = "<group>"; };
+		240976DC15E8624D00920975 /* SARViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SARViewController.m; sourceTree = "<group>"; };
+		240976DF15E8624D00920975 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SARViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		240976C215E8624D00920975 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				240976CA15E8624D00920975 /* UIKit.framework in Frameworks */,
+				240976CC15E8624D00920975 /* Foundation.framework in Frameworks */,
+				240976CE15E8624D00920975 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		240976BA15E8624D00920975 = {
+			isa = PBXGroup;
+			children = (
+				240976CF15E8624D00920975 /* SARRangeSlider */,
+				240976C815E8624D00920975 /* Frameworks */,
+				240976C615E8624D00920975 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		240976C615E8624D00920975 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				240976C515E8624D00920975 /* SARRangeSlider.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		240976C815E8624D00920975 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				240976C915E8624D00920975 /* UIKit.framework */,
+				240976CB15E8624D00920975 /* Foundation.framework */,
+				240976CD15E8624D00920975 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		240976CF15E8624D00920975 /* SARRangeSlider */ = {
+			isa = PBXGroup;
+			children = (
+				240976D815E8624D00920975 /* SARAppDelegate.h */,
+				240976D915E8624D00920975 /* SARAppDelegate.m */,
+				240976DB15E8624D00920975 /* SARViewController.h */,
+				240976DC15E8624D00920975 /* SARViewController.m */,
+				240976DE15E8624D00920975 /* SARViewController.xib */,
+				240976D015E8624D00920975 /* Supporting Files */,
+			);
+			path = SARRangeSlider;
+			sourceTree = "<group>";
+		};
+		240976D015E8624D00920975 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				240976D115E8624D00920975 /* SARRangeSlider-Info.plist */,
+				240976D215E8624D00920975 /* InfoPlist.strings */,
+				240976D515E8624D00920975 /* main.m */,
+				240976D715E8624D00920975 /* SARRangeSlider-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		240976C415E8624D00920975 /* SARRangeSlider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 240976E315E8624D00920975 /* Build configuration list for PBXNativeTarget "SARRangeSlider" */;
+			buildPhases = (
+				240976C115E8624D00920975 /* Sources */,
+				240976C215E8624D00920975 /* Frameworks */,
+				240976C315E8624D00920975 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SARRangeSlider;
+			productName = SARRangeSlider;
+			productReference = 240976C515E8624D00920975 /* SARRangeSlider.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		240976BC15E8624D00920975 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SAR;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Shunsuke Araki";
+			};
+			buildConfigurationList = 240976BF15E8624D00920975 /* Build configuration list for PBXProject "SARRangeSlider" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 240976BA15E8624D00920975;
+			productRefGroup = 240976C615E8624D00920975 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				240976C415E8624D00920975 /* SARRangeSlider */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		240976C315E8624D00920975 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				240976D415E8624D00920975 /* InfoPlist.strings in Resources */,
+				240976E015E8624D00920975 /* SARViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		240976C115E8624D00920975 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				240976D615E8624D00920975 /* main.m in Sources */,
+				240976DA15E8624D00920975 /* SARAppDelegate.m in Sources */,
+				240976DD15E8624D00920975 /* SARViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		240976D215E8624D00920975 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				240976D315E8624D00920975 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		240976DE15E8624D00920975 /* SARViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				240976DF15E8624D00920975 /* en */,
+			);
+			name = SARViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		240976E115E8624D00920975 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		240976E215E8624D00920975 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		240976E415E8624D00920975 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SARRangeSlider/SARRangeSlider-Prefix.pch";
+				INFOPLIST_FILE = "SARRangeSlider/SARRangeSlider-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		240976E515E8624D00920975 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SARRangeSlider/SARRangeSlider-Prefix.pch";
+				INFOPLIST_FILE = "SARRangeSlider/SARRangeSlider-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		240976BF15E8624D00920975 /* Build configuration list for PBXProject "SARRangeSlider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				240976E115E8624D00920975 /* Debug */,
+				240976E215E8624D00920975 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		240976E315E8624D00920975 /* Build configuration list for PBXNativeTarget "SARRangeSlider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				240976E415E8624D00920975 /* Debug */,
+				240976E515E8624D00920975 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 240976BC15E8624D00920975 /* Project object */;
+}
