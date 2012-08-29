@@ -17,6 +17,7 @@
 		240976E015E8624D00920975 /* SARViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 240976DE15E8624D00920975 /* SARViewController.xib */; };
 		240976ED15E8630000920975 /* SARRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 240976EC15E8630000920975 /* SARRangeSlider.m */; };
 		240976F715E892AB00920975 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240976F615E892AB00920975 /* QuartzCore.framework */; };
+		249D62F215EDC2C5006C338D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 249D62F115EDC2C5006C338D /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		240976EB15E8630000920975 /* SARRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SARRangeSlider.h; sourceTree = "<group>"; };
 		240976EC15E8630000920975 /* SARRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SARRangeSlider.m; sourceTree = "<group>"; };
 		240976F615E892AB00920975 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		249D62F115EDC2C5006C338D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		240976BA15E8624D00920975 = {
 			isa = PBXGroup;
 			children = (
+				249D62F115EDC2C5006C338D /* README.md */,
 				240976CF15E8624D00920975 /* SARRangeSliderDemo */,
 				240976C815E8624D00920975 /* Frameworks */,
 				240976C615E8624D00920975 /* Products */,
@@ -170,6 +173,7 @@
 			files = (
 				240976D415E8624D00920975 /* InfoPlist.strings in Resources */,
 				240976E015E8624D00920975 /* SARViewController.xib in Resources */,
+				249D62F215EDC2C5006C338D /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +303,7 @@
 				240976E515E8624D00920975 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

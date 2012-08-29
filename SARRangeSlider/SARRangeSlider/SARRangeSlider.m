@@ -47,15 +47,17 @@ typedef enum HandleDirection : NSUInteger {
 	// draw two vertical black line
 	CGFloat lineLength = rect.size.height / 2;
 	CGFloat lineTop = rect.size.height / 2 / 2;
+	CGFloat lineOneX = HANDLE_WIDTH / 2 - 1.5;
+	CGFloat lineTwoX = HANDLE_WIDTH / 2 + 1.5;
 	UIBezierPath *bpath = [UIBezierPath bezierPath];
 	bpath.lineWidth = 1.0;
 	[[UIColor blackColor] setStroke];
-	[bpath moveToPoint:CGPointMake( HANDLE_WIDTH / 2 - 2, lineTop )];
-	[bpath addLineToPoint:CGPointMake( HANDLE_WIDTH / 2 - 2, lineTop + lineLength)];
+	[bpath moveToPoint:CGPointMake( lineOneX, lineTop )];
+	[bpath addLineToPoint:CGPointMake( lineOneX, lineTop + lineLength)];
 	[bpath closePath];
 	[bpath stroke];
-	[bpath moveToPoint:CGPointMake( HANDLE_WIDTH / 2 + 2, lineTop )];
-	[bpath addLineToPoint:CGPointMake( HANDLE_WIDTH / 2 + 2, lineTop + lineLength)];
+	[bpath moveToPoint:CGPointMake( lineTwoX, lineTop )];
+	[bpath addLineToPoint:CGPointMake( lineTwoX, lineTop + lineLength)];
 	[bpath closePath];
 	[bpath stroke];
 }
@@ -66,51 +68,31 @@ typedef enum HandleDirection : NSUInteger {
 @implementation SARRangeSlider
 {
 	UIView *sliderView;
-	UIView *leftHandleView;
-	UIView *rightHandleView;
+	SARRangeSliderHandleView *leftHandleView;
+	SARRangeSliderHandleView *rightHandleView;
 }
 
 #pragma mark property
-- (void)setLeftValue:(float)leftValue {
-	if (leftValue < self.minimumValue) {
-		leftValue = self.minimumValue;
-	}
-    
-	if (leftValue + self.minimumRange > self.rightValue) {
-		leftValue = self.rightValue - self.minimumRange;
-	}
-	
-	_leftValue = leftValue;
-    
-	[self setNeedsLayout];
-}
-
-- (void)setRightValue:(float)rightValue {
-	if (rightValue > self.maximumValue) {
-		rightValue = self.maximumValue;
-	}
-
-    if (rightValue - self.minimumRange < self.leftValue) {
-		rightValue = self.leftValue + self.minimumRange;
-	}
-	
-	_rightValue = rightValue;
-    
-	[self setNeedsLayout];
-}
-
-- (void)setMinimumRange:(float)minimumRange {
-	_minimumRange = minimumRange;
-	[self setNeedsLayout];
-}
-
 - (void)setMinimumValue:(float)minimumValue {
 	_minimumValue = minimumValue;
+	_leftValue = MAX(_leftValue, _minimumValue);
 	[self setNeedsLayout];
 }
 
 - (void)setMaximumValue:(float)maximumValue {
 	_maximumValue = maximumValue;
+	_rightValue = MIN(_rightValue, _maximumValue);
+	[self setNeedsLayout];
+}
+
+- (void)setLeftValue:(float)leftValue rightValue:(float)rightValue {
+	leftValue = MAX(leftValue, self.minimumValue);
+	rightValue = MIN(rightValue, self.maximumValue);
+	if (leftValue > rightValue) {
+		leftValue = rightValue;
+	}
+	_leftValue = leftValue;
+	_rightValue = rightValue;
 	[self setNeedsLayout];
 }
 
@@ -137,9 +119,8 @@ typedef enum HandleDirection : NSUInteger {
 	self.backgroundColor = [UIColor clearColor];
 	self.minimumValue = 0.0;
 	self.maximumValue = 1.0;
-	self.leftValue = 0.0;
-	self.rightValue = 1.0;
-	self.minimumRange = 0.0;
+	self.lockLength = 0.0;
+	[self setLeftValue:0.0 rightValue:1.0];
 	
     // setup base layer
 	sliderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
@@ -195,7 +176,7 @@ typedef enum HandleDirection : NSUInteger {
     CGFloat availableWidth = self.frame.size.width - HANDLE_WIDTH * 2;
     
     CGFloat rangeValue = self.maximumValue - self.minimumValue;
-    
+
     CGFloat leftPoint = floorf((self.leftValue - self.minimumValue) / rangeValue * availableWidth);
     CGFloat rightPoint = floorf((self.rightValue - self.minimumValue) / rangeValue * availableWidth);
     if (isnan(leftPoint)) {
@@ -221,7 +202,11 @@ typedef enum HandleDirection : NSUInteger {
         CGPoint translation = [gesture translationInView:self];
         CGFloat rangeValue = self.maximumValue - self.minimumValue;
         CGFloat availableWidth = self.frame.size.width - HANDLE_WIDTH * 2;
-        self.leftValue += translation.x / availableWidth * rangeValue;
+		CGFloat addValue = translation.x / availableWidth * rangeValue;
+		CGFloat newRange = self.rightValue - (self.leftValue + addValue);
+		if (newRange >= self.lockLength) {
+			[self setLeftValue:self.leftValue+addValue rightValue:self.rightValue];
+		}
         
         [gesture setTranslation:CGPointZero inView:self];
         
@@ -234,7 +219,11 @@ typedef enum HandleDirection : NSUInteger {
         CGPoint translation = [gesture translationInView:self];
         CGFloat rangeValue = self.maximumValue - self.minimumValue;
         CGFloat availableWidth = self.frame.size.width - HANDLE_WIDTH * 2;
-        self.rightValue += translation.x / availableWidth * rangeValue;
+		CGFloat addValue = translation.x / availableWidth * rangeValue;
+		CGFloat newRange = (self.rightValue + addValue) - self.leftValue;
+		if (newRange >= self.lockLength) {
+			[self setLeftValue:self.leftValue rightValue:self.rightValue+addValue];
+		}
         
         [gesture setTranslation:CGPointZero inView:self];
         
